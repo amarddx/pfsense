@@ -210,14 +210,14 @@ function get_firewall_info() {
 	if (file_exists('/var/db/uniqueid')) {
 		$ngid = file_get_contents('/var/db/uniqueid');
 		if (!empty($ngid)) {
-			$firewall_info .= "<br/>Netgate Device ID: " . htmlspecialchars($ngid);
+			$firewall_info .= "<br/>IN300 Device ID: " . htmlspecialchars($ngid);
 		}
 	}
 
 	if (function_exists("system_get_thothid")) {
 		$thothid = system_get_thothid();
 		if (!empty($thothid)) {
-			$firewall_info .= "<br/>Netgate Crypto ID: " . htmlspecialchars(chop($thothid));
+			$firewall_info .= "<br/>IN300 Crypto ID: " . htmlspecialchars(chop($thothid));
 		}
 	}
 
