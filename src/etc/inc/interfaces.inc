@@ -2387,8 +2387,8 @@ EOD;
 		}
 
 		$mpdconf .= <<<EOD
-	set link disable chap pap
-	set link accept chap pap eap
+	set link deny chap pap chap-md5 chap-msv1 chap-msv2 eap
+	set link accept pap
 	set link disable incoming
 
 EOD;
@@ -2606,13 +2606,13 @@ EOD;
 	exec("/usr/sbin/usbconfig | /usr/bin/egrep -ie '(huawei)'", $usbmodemoutput);
 	mwexec("/bin/ps auxww | /usr/bin/grep \"{$interface}\" | /usr/bin/grep \"[3]gstats\" | /usr/bin/awk '{print $2}' | /usr/bin/xargs kill");
 	foreach ($ports as $port) {
-		if (preg_match("/huawei/i", implode("\n", $usbmodemoutput))) {
+		if (preg_match("/zte/i", implode("\n", $usbmodemoutput))) {
 			$mondev = substr(basename($port), 0, -1);
 			$devlist = glob("/dev/{$mondev}?");
 			$mondev = basename(end($devlist));
 		}
-		if (preg_match("/zte/i", implode("\n", $usbmodemoutput))) {
-			$mondev = substr(basename($port), 0, -1) . "1";
+		if (preg_match("/huawei/i", implode("\n", $usbmodemoutput))) {
+			$mondev = substr(basename($port), 0, -1) . "2";
 		}
 		if ($mondev != '') {
 			log_error(sprintf(gettext('Starting 3gstats.php on device \'%1$s\' for interface \'%2$s\''), $mondev, $interface));
