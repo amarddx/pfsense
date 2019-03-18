@@ -188,7 +188,7 @@ $temp_use_f = (isset($user_settings['widgets']['thermal_sensors-0']) && !empty($
 				$uniqueid = system_get_uniqueid();
 				if (!empty($uniqueid)) {
 					print("<br />" .
-					    gettext("Netgate Device ID:") .
+					    gettext("IN300 Device ID:") .
 					    " <strong>{$uniqueid}</strong>");
 				}
 ?>
