@@ -56,9 +56,9 @@
 <totalsteps>10</totalsteps>
 <step>
 	<id>1</id>
-	<title>pfSense Setup</title>
+	<title>IN300 Setup</title>
 	<disableheader>true</disableheader>
-	<description>This wizard will provide guidance through the initial configuration of pfSense.&lt;br/&gt;&lt;br/&gt; The wizard may be stopped at any time by clicking the logo image at the top of the screen.</description>
+	<description>This wizard will provide guidance through the initial configuration of IN300.&lt;br/&gt;&lt;br/&gt; The wizard may be stopped at any time by clicking the logo image at the top of the screen.</description>
 	<fields>
 		<field>
 			<name>Next</name>
@@ -72,22 +72,11 @@
 		conf_mount_ro();
 	</stepbeforeformdisplay>
 </step>
-<step>
-	<id>2</id>
-	<title>Bling your pfSense with pfSense Gold</title>
-	<disableheader>true</disableheader>
-	<description>Feel the power of a pfSense Gold subscription. Receive special benefits while supporting ongoing development of the Open Source pfSense project.&lt;br/&gt; &lt;br/&gt; Benefits include access to our AutoConfigBackup secure cloud based backup service for up to 10 hosts, pre-publication access to the updated pfSense: The Definitive Guide book in PDF, fully updated for the pfSense 2.1 release, and a monthly online MeetUp! Video conference to discuss and demonstrate advanced features and architectures using pfSense. &lt;br/&gt; &lt;br/&gt; Go to &lt;a href="https://www.pfsense.org/gold" target="_blank"&gt; pfSense Gold Subscriptions&lt;/a&gt; to sign up now. &lt;br/&gt; &lt;br/&gt; </description>
-	<fields>
-		<field>
-			<name>Next</name>
-			<type>submit</type>
-		</field>
-	</fields>
-</step>
+
 <step>
 	<id>3</id>
 	<title>General Information</title>
-	<description>On this screen the general pfSense parameters will be set.</description>
+	<description>On this screen the general IN300 parameters will be set.</description>
 	<fields>
 		<field>
 			<name>Hostname</name>
@@ -731,7 +720,7 @@
 	<id>8</id>
 	<title>Reload configuration</title>
 	<disableheader>true</disableheader>
-	<description>Click 'Reload' to reload pfSense with new changes.</description>
+	<description>Click 'Reload' to reload IN300 with new changes.</description>
 	<fields>
 		<field>
 			<name>Reload</name>
@@ -800,10 +789,9 @@
 	</stepbeforeformdisplay>
 	<description>
 	<![CDATA[
-		Congratulations!  pfSense is now configured.<p>
+		Congratulations!  IN300 is now configured.<p>
 		Please consider contributing back to the project!</p><p>
-		Click <a target='_blank' href='https://www.pfsense.org/get-involved/index.html'>here</a> to purchase services offered by the pfSense team and find other ways to contribute.</p><p>
-		Click <a href='$myurl'>here</a> to continue on to pfSense webConfigurator.</p>
+		
 	]]>
 	</description>
 </step>
