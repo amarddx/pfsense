@@ -209,7 +209,7 @@ $rows_displayed = false;
 				$uniqueid = system_get_uniqueid();
 				if (!empty($uniqueid)) {
 					print("<br />" .
-					    gettext("Netgate Device ID:") .
+					    gettext("IN300 Device ID:") .
 					    " <strong>{$uniqueid}</strong>");
 				}
 ?>
