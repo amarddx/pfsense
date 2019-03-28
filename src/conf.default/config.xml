@@ -50,6 +50,10 @@
 		<bogons>
 			<interval>monthly</interval>
 		</bogons>
+		<serialspeed>115200</serialspeed>
+		<primaryconsole>video</primaryconsole>
+		<enablesshd>enabled</enablesshd>
+		<enableserial></enableserial>
 	</system>
 	<interfaces>
 		<wan>
