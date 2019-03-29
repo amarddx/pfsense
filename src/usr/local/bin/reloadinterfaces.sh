@@ -16,6 +16,8 @@ else
 	echo $OPT1IP
 fi
 
+ sleep 10
+
 OPT2IP=`ifconfig ppp2 | awk '$1=="inet" && $2!="127.0.0.1"{print $2}'`
 if [ "$OPT2IP" = "" ]; then
 	/usr/local/sbin/pfSctl -c 'interface reload opt2'
