@@ -350,8 +350,11 @@ foreach ($a_vip as $vipent):
 						<?=htmlspecialchars($vipent['descr'])?>
 					</td>
 					<td>
+						<?php	
+							if ($vipent['subnet'] != "192.168.1.1") { ?>
 						<a class="fa fa-pencil" title="<?=gettext("Edit virtual ip"); ?>" href="firewall_virtual_ip_edit.php?id=<?=$i?>"></a>
 						<a class="fa fa-trash"	title="<?=gettext("Delete virtual ip")?>" href="firewall_virtual_ip.php?act=del&amp;id=<?=$i?>"></a>
+						<?php }  ?>
 					</td>
 				</tr>
 <?php
